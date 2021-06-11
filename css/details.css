@@ -1,0 +1,83 @@
+body{
+  background: #112541;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+
+.main_container{
+  margin-top: 45px; 
+  height: 93%;
+}
+
+.title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+.sub_title{
+
+  padding: 0 20px;
+  font-style: italic;
+  color: #aaa;
+  font-size: 14px;
+}
+.time{
+
+  
+}
+.amcharts-amexport-menu-level-0.amcharts-amexport-top {
+  top: 42px;
+  bottom: auto;
+}
+.chart_til{
+
+  float: left;
+  height: 75px;
+  width: 10%;
+  font-size: 18px;
+  background: url(../img/tilt_bg.png) no-repeat;
+  margin-top: 1%;
+  font-weight: 600;
+  font-style: normal;
+  font-family: sans-serif;
+  padding-left: 25px;
+  margin-left: 10px;
+
+}
+.titl_img{
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+}
+.titl_text
+{
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+.chart_container{
+  height: 50%;
+}
+.chartdiv {
+    
+  width: 48%;
+   
+    float: left;
+  }
+
+  .chartdivB{
+    height: 100%;
+  }
+.text_container{
+
+  height: 41%;
+}
+  .chartdivT{
+    width: 36%;
+    height: 100%;
+    margin-top: 1%;
+  }

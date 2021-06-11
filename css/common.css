@@ -1,0 +1,313 @@
+@charset "UTF-8";
+#common_baseFont { font-size: 12.5px; display: none; }
+
+@media (min-width: 1700px) and (min-height: 750px) { #common_baseFont { font-size: 16px; } }
+@media (min-width: 3300px) and (min-height: 1600px) { #common_baseFont { font-size: 32px; } }
+.hover_scale:hover, .common_popTabContainer .common_popTab:hover { transform: scale(1.1); }
+.hover_scale:active, .common_popTabContainer .common_popTab:active { transform: scale(1); }
+
+.common_active, .common_popTabContainer .common_popTabSel { color: #ff0; }
+
+.common_popTabContainer { width: 0.45rem; position: absolute; right: 92%; top: 16%; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; flex-wrap: nowrap; }
+.common_popTabContainer .common_popTab { width: 100%; padding: 0.1rem 0.16rem; font-size: 0.18rem; cursor: pointer; border: 1px solid transparent; border-image-source: url(../img/head/sideBtn.png); border-image-width: 0.45rem 0 0.25rem 0.45rem; border-image-slice: 60% 0 25% 100% fill; border-image-repeat: round; }
+.common_popTabContainer .common_popTabSel { border-image-source: url(../img/head/sideBtnSel.png); }
+
+input, textarea, .common_multiSearch { outline: none; transition: box-shadow 0.5s; }
+input:focus, textarea:focus, .common_multiSearch:focus { box-shadow: 0 0 0.15rem #3f8ab9; }
+input:hover, textarea:hover, .common_multiSearch:hover { box-shadow: 0 0 0.15rem #3f8ab9; }
+input[disabled], textarea[disabled], .common_multiSearch[disabled] { background-color: #3E4455 !important; color: #ccc !important; cursor: not-allowed !important; }
+
+.common_innerbox, .Wdate, .common_SearchBox, .common_innertextarea, .common_innerComobo, .common_fileLabel .common_fileInput, .common_fileLabel .common_fileText, .common_multiSearch, input[type=text], textarea { font: normal 0.16rem Microsoft YaHei, serif; height: 0.3rem; width: 100%; padding-left: 0.05rem; color: #e8e9ea; border: 0.014rem solid #3f8ab9; background-color: transparent; border-radius: 0.05rem; }
+
+.Wdate { background: url(../img/datePicker.png) no-repeat right; padding-right: 0.4rem; background-size: 0.33rem 100%; }
+
+.common_historyBtn { background: transparent url(../img/head/backIcon.png) 0 0 no-repeat; background-size: 100% 100%; width: 0.5rem; height: 0.5rem; position: absolute; right: 8%; top: 0; z-index: 5; cursor: pointer; }
+
+.common_SearchBox { padding-right: 0.35rem; }
+
+.common_boxBtn { width: 0.35rem; height: 0.3rem; border-left: 0.014rem solid #3f8ab9; border-radius: 0.05rem; position: absolute; right: 0; top: 0; color: #e8e9ea !important; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+.common_boxBtn:hover { font-size: 0.2rem; color: #e8e9ea !important; }
+.common_boxBtn:active { font-size: 0.16rem; }
+
+.common_innertextarea { height: 100%; resize: none; }
+
+.common_innerComobo { float: left; width: 100%; padding-right: 0.35rem; }
+
+.common_comboBtn { width: 0.35rem; height: 0.3rem; border-left: 0.014rem solid #3f8ab9; border-radius: 0.05rem; position: absolute; right: 0; cursor: pointer; color: #e8e9ea !important; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+.common_comboBtn:hover { font-size: 0.2rem; color: #e8e9ea !important; }
+.common_comboBtn:active { font-size: 0.16rem; }
+
+.common_xlContent { position: absolute; z-index: 999; overflow-y: auto; margin: 0; padding: 0; border: 0.014rem solid #3f8ab9; border-top: none; border-radius: 0.05rem; background: rgba(2, 42, 81, 0.8); }
+.common_xlContent input[type=checkbox] { position: relative; top: 0.02rem; height: 0.15rem; width: 0.15rem; }
+.common_xlContent .common_xlUl { overflow-x: hidden; overflow-y: auto; width: 100%; margin: 0; padding: 0; border-top: none; }
+.common_xlContent .common_selectItem { font: normal 0.16rem Microsoft YaHei, serif; height: 0.25rem; padding-left: 0.05rem; cursor: pointer; text-align: left; width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.common_xlContent .common_selectItem:hover { border-radius: 0.04rem; background: rgba(63, 138, 185, 0.38); }
+.common_xlContent .common_selectItemSel { border-radius: 0.04rempx; background: rgba(63, 138, 185, 0.38); }
+.common_xlContent .common_selectItem_keyChoose { font: normal 0.18rem Microsoft YaHei, serif; height: 0.25rem; padding-left: 0.05rem; cursor: pointer; text-align: left; width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; border-radius: 0.04rem; }
+
+.common_fileLabel { position: relative; display: block; float: left; width: 100%; }
+.common_fileLabel .common_fileInput { float: left; }
+.common_fileLabel input[type='file'].common_fileInput { display: none; }
+.common_fileLabel .common_fileContent { display: block; width: 100%; height: 0.3rem; }
+.common_fileLabel .common_fileText { width: 70%; float: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.common_multiSearch { padding: 0.014rem 0.02rem; position: relative; width: 100%; height: auto; min-height: 0.3rem; max-height: 0.69rem; overflow-y: auto; overflow-x: hidden; }
+.common_multiSearch .common_inputHide { font: normal 0.16rem Microsoft YaHei, serif; height: 0.26rem; outline: none; border: none; background: none; width: 0.2rem; float: left; color: #e8e9ea; -webkit-appearance: textfield; }
+.common_multiSearch .common_inputHide::-webkit-search-cancel-button { display: none; }
+.common_multiSearch .common_multiItem { max-width: 5rem; height: 0.24rem; border: 0.014rem solid #3f8ab9; background: rgba(2, 42, 81, 0.3); border-radius: 0.03rem; float: left; padding: 0 0.05rem; margin: 0.014rem 0.03rem 0.014rem 0; cursor: default; }
+.common_multiSearch .common_multiItem .fa { cursor: pointer; color: #ccc; }
+.common_multiSearch .common_multiItem .fa:hover { color: #fff; }
+.common_multiSearch .common_hideStr { width: auto; position: absolute; top: 0; left: 0; visibility: hidden; }
+
+.common_focus { box-shadow: 0 0 0.15rem #3f8ab9; }
+
+.common_radio { float: left; width: 0.3rem; height: 0.3rem; font-size: 0.25rem; line-height: 0.3rem; color: #3f8ab9; text-align: center; cursor: pointer; }
+
+.common_radiouncheck:before { content: "\f10c"; }
+
+.common_radiochecked:before { content: "\f05d"; }
+
+.common_radiolabel { line-height: 0.3rem; margin-left: 0.4rem; cursor: default; text-align: left; }
+
+.common-checkbox-container { width: 100%; height: 0.3rem; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: row; flex-wrap: nowrap; }
+.common-checkbox-container .common-checkbox { font-size: 0.25rem; line-height: 0.3rem; width: 0.3rem; cursor: pointer; color: #3f8ab9; }
+.common-checkbox-container .checkbox-label { line-height: 0.3rem; cursor: default; }
+
+.common-disable { color: #ccc !important; cursor: not-allowed !important; }
+
+.window_content_big { width: 1795px; height: 963px; padding-top: 16px; padding-left: 15px; }
+
+.common_win_big { position: absolute; z-index: 101; width: 1857px; height: 995px; border-image: url(../img/new_window.png) 100 fill/100px; }
+
+.common_popContainer { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; position: absolute; overflow: hidden; top: 0; left: 0; z-index: 100; }
+.common_popContainer.common_popOut { background: rgba(2, 42, 81, 0.9); }
+.common_popContainer .common_dragContent { position: absolute; cursor: move; }
+.common_popContainer .common_win_big { width: 95%; height: 97%; position: relative; border-image: url(../img/new_window.png) 70 fill/0.7rem; }
+.common_popContainer .common_win_big_zTree { width: 95%; height: 97%; position: absolute; top: 0.4rem; bottom: 0; }
+.common_popContainer .common_popWin_title { font-size: 0.25rem; position: absolute; top: 0.25rem; left: 0.2rem; width: 100%; height: 0.4rem; padding-left: 0.25rem; /* line-height: 40px; */ border-image: url(../img/common_pubBtn.png) 63 93 1 40 fill/0.63rem 0.93rem 0.014rem 0.4rem; }
+
+.common_popWin_Close_big { position: absolute; width: 0.35rem; height: 0.35rem; top: 0.27rem; right: 0.25rem; cursor: pointer; background: url(../img/popColseBtn.png); background-size: 100% 100%; z-index: 100; }
+.common_popWin_Close_big:hover { transform: scale(1.07); }
+.common_popWin_Close_big:active { transform: scale(1); }
+
+.common_loadMask { position: fixed; z-index: 100; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(2, 42, 81, 0.9); }
+
+.common_win_small { position: absolute; z-index: 100; width: 3rem; height: 1.2rem; border: 0.03rem solid #3f8ab9; border-radius: 0.15rem; background-color: rgba(2, 42, 81, 0.9); box-shadow: 0 0 0.45rem #3f8ab9; }
+.common_win_small .common_win_small_title { font-size: 0.18rem; font-style: normal; line-height: 0.3rem; width: 100%; height: 0.3rem; margin: 0; padding: 0 0 0 0.15rem; }
+.common_win_small .common_win_small_msg { display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; width: 100%; height: 0.5rem; padding: 0 0.15rem; }
+.common_win_small .common_winSmallBtnContent { width: 100%; display: flex; justify-content: center; }
+.common_win_small .common_win_small_btn { font-size: 0.16rem; position: relative; padding-left: 0.1rem; padding-right: 0.1rem; overflow: hidden; color: #e8e9ea; border: 0.014rem solid #3f8ab9; border-radius: 0.05rem; outline: none; background: none; transition: box-shadow 0.5s; }
+.common_win_small .common_win_small_btn:active { color: #ff0; }
+.common_win_small .common_win_small_btn:hover { background-color: rgba(2, 42, 81, 0.5); box-shadow: 0 0 0.15rem #3f8ab9; }
+
+.common_grid_scroll { position: relative; margin-top: 0.1rem; border-color: #3f8ab9; border-width: 0.014rem; height: 100%; width: 100%; overflow: auto; }
+.common_grid_scroll .common_head { width: 100%; }
+.common_grid_scroll .common_grid_div { position: relative; }
+.common_grid_scroll .common_grid_table { border: 0.014rem solid; }
+.common_grid_scroll table { width: 100%; overflow: hidden; table-layout: fixed; border-collapse: collapse; }
+.common_grid_scroll table thead { border-bottom: 0.014rem solid #3f8ab9; background: #0B2122; height: 0.35rem; }
+.common_grid_scroll table thead .common_sortHead { cursor: pointer;}
+.common_grid_scroll table thead .common_sortHead .common_sort { position: absolute; width: 0.24rem !important; height: 100% !important; display: flex; align-items: center; justify-content: center; flex-direction: column; flex-wrap: nowrap; right: 0.05rem; top: 0; }
+.common_grid_scroll table thead .common_sortHead .common_sort i { height: 0.16rem; width: 0.16rem; color: #8D907D; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+.common_grid_scroll table thead .common_sortHead .common_sortSelected { color: #e8e9ea !important; }
+.common_grid_scroll table tbody tr { height: 0.35rem; background-color: rgba(19, 40, 61, 0.3); }
+.common_grid_scroll table tbody tr:nth-child(2n) { background-color: rgba(25, 51, 76, 0.3); }
+.common_grid_scroll table tbody tr:hover { background-color: #2d4e71; }
+.common_grid_scroll table tbody .common_trSel { background: rgba(87, 152, 213, 0.6) !important; }
+.common_grid_scroll table .common_td_th, .common_grid_scroll table th, .common_grid_scroll table td { position: relative; height: 0.35rem; border: 0.014rem solid #3f8ab9; padding: 0 0.1rem; overflow: hidden; }
+.common_grid_scroll table th { cursor: default; }
+.common_grid_scroll table th > div { font-size: 0.16rem; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+.common_grid_scroll table td:hover { background-color: rgba(87, 152, 213, 0.6); }
+.common_grid_scroll table td > div { font-size: 0.16rem; padding: 0; position: relative; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; height: 100%; line-height: 0.35rem; }
+.common_grid_scroll .common_checkbox_container { text-align: center; position: relative; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+.common_grid_scroll .common_checkbox_container .common_grid_check_label { width: 100%; font-size: 0.15rem; height: auto; cursor: pointer; }
+.common_grid_scroll .common_checkbox_container .common_grid_check_label:after { content: "\f096"; }
+.common_grid_scroll .common_checkbox_container .common_head_checkbox { display: none; }
+.common_grid_scroll .common_checkbox_container input[type=checkbox]:checked + .common_grid_check_label:after { content: "\f046"; }
+.common_grid_scroll .common_grid_div input[type='text'], .common_grid_scroll .common_grid_div textarea, .common_grid_scroll .common_grid_div input[type='text'].Wdate { background-color: #022A51; }
+.common_grid_scroll .common_click_td { cursor: pointer; text-decoration: underline; color: #ff0; }
+.common_grid_scroll .common_click_td:hover { color: #4E87AD; }
+.common_grid_scroll .common_editTd { overflow: visible; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+.common_grid_scroll .common_editContent { display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+.common_grid_scroll .common_editContent .common_editBtn { width: 0.22rem; height: 0.22rem; margin: 0 0.025rem; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+.common_grid_scroll .common_editContent .common_editBtn:hover { transform: scale(1.3); color: #ff0; }
+.common_grid_scroll .common_editContent .common_gridSave { display: none; }
+.common_grid_scroll .common_editContent .common_gridCancle { display: none; }
+
+.common_loadingMask { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; font-size: 0.2rem; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; background: rgba(2, 42, 81, 0.9); }
+
+.common_tbar_content { position: relative; display: flex; width: 100%; height: 0.35rem; align-items: center; }
+.common_tbar_content .common_Btn { margin-right: 0.1rem; flex-shrink: 0; }
+.common_tbar_content .common_table_page_input { font-family: Microsoft YaHei, serif; font-size: 0.16rem; width: 0.5rem; height: 0.25rem; text-align: center; flex-shrink: 0; color: #e8e9ea; border: 0.014rem solid #3f8ab9; border-radius: 0.05rem; outline: none; background: rgba(2, 42, 81, 0); }
+.common_tbar_content .common_tbBtn { width: 0.16rem; height: 0.16rem; cursor: pointer; text-align: center; font-size: 0.16rem; font-weight: bold; flex-shrink: 0; }
+.common_tbar_content .common_tbBtn:hover { transform: scale(1.3); color: #ff0; }
+.common_tbar_content .common_tbBtn:active { transform: scale(1); }
+.common_tbar_content .common_toolbartext { height: auto; }
+.common_tbar_content .common_tbar_btns_line { height: 0.2rem; width: 0.1rem; border-right: 0.014rem solid #e8e9ea; margin-right: 0.1rem; }
+.common_tbar_content .common_tbarMask { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 42, 81, 0.9); }
+
+/*切换按钮*/
+.pub_tabBtn { font-family: Microsoft YaHei, serif; font-size: 0.16rem; line-height: 0.18rem; overflow: hidden; width: 1rem; height: 0.25rem; margin-right: 0.1rem; cursor: pointer; text-align: center; color: #e8e9ea; border: none; border-image: url(../img/tabbtn.png) 10 fill/0.1rem; outline: none; background: none; transition: border-image 0.5s; }
+.pub_tabBtn:hover, .pub_tabBtn:active { color: #ff0; border-image: url(../img/tabbtnsel.png) 10 fill/0.1rem; }
+
+.pub_tabBtnIdx { display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; padding: 0 0.05rem; height: 100%; }
+
+.pub_tabBtnSel { color: #ff0; border-image: url(../img/tabbtnsel.png) 10 fill/0.1rem; }
+
+.common_Btn, button { font-family: Microsoft YaHei, serif; font-size: 0.16rem; overflow: hidden; height: 0.3rem; cursor: pointer; text-align: center; color: #e8e9ea; border: 0.014rem solid #3f8ab9; border-radius: 0.05rem; outline: none; background: rgba(2, 42, 81, 0.6); transition: box-shadow 0.5s; }
+.common_Btn:hover, button:hover { box-shadow: 0 0 0.15rem #3f8ab9; }
+.common_Btn:active, button:active { color: #ff0; }
+
+/*小框标题背景*/
+.pub_titlebg { height: 0.25rem; margin: 0; padding: 0; border-image: url(../img/titlebg.png) 10 19 15 10 fill/0.1rem 0.19rem 0.15rem 0.1rem; }
+.pub_titlebg .pub_title { font-size: 0.174rem; font-weight: normal; position: relative; top: -0.03rem; left: 0.2rem; display: block; float: left; margin: 0; cursor: default; }
+.pub_titlebg .pub_titlemore { position: relative; color: #3f8ab9; float: right; width: 0.5rem; height: 0.25rem; margin: 0; cursor: pointer; }
+.pub_titlebg .pub_titlemore:after { content: '•••'; padding: 0; font-size: 0.2rem; margin: 0; position: relative; top: -0.05rem; }
+.pub_titlebg .pub_tabBtnIntitle { font-size: 0.14rem; font-weight: normal; line-height: 0.2rem; position: relative; float: right; overflow: hidden; width: 0.5rem; height: 0.25rem; margin: -0.03rem 0.2rem 0 0; padding: 0; cursor: pointer; text-align: center; border-image: url(../img/null.png) 10 fill/0.1rem; /* border-image: url(../img/titlebg.png) 10 19 15 10 fill/10px 19px 15px 10px round; */ }
+.pub_titlebg .pub_tabBtnIntitle:hover { border-image: url(../img/btnselintite.png) 10 fill/0.1rem; }
+.pub_titlebg .pub_tabBtnIntitleSel { color: #ff0; border-image: url(../img/btnselintite.png) 10 fill/0.1rem; }
+
+/*竖向小框标题背景*/
+.pub_vtitlebg { font-size: 0.18rem; font-weight: normal; width: 0.25rem; margin: 0; padding: 0 0 0 0.014rem; cursor: default; border-image: url(../img/titlebgv.png) 10 0 20 27 fill/0.1rem 0 0.2rem 0.27rem; display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; }
+
+/*折叠菜单标题背景*/
+.pub_titlebgaccor { position: relative; height: 0.3rem; margin: 0; padding: 0; /*border-image: url(../img/titlebgaccor.png) 10 19 15 10 fill/10px 19px 15px 10px;*/ border-image: url(../img/titlebg.png) 10 19 15 10 fill/0.1rem 0.19rem 0.15rem 0.1rem; }
+.pub_titlebgaccor .pub_title { font-size: 0.18rem; font-weight: normal; position: relative; margin: 0; padding-left: 0.2rem; line-height: 0.25rem; float: left; cursor: default; }
+.pub_titlebgaccor .common_arr_btn { position: absolute; right: 0; width: 0.2rem; height: 0.2rem; cursor: pointer; }
+.pub_titlebgaccor .common_arr_btn:hover { transform: scale(1.3); }
+.pub_titlebgaccor .common_arr_btn:active { transform: scale(1); }
+
+/*折叠菜单的内容*/
+.pub_accordiv { width: 100%; margin-bottom: 0.1rem; }
+
+a { color: #ff0; }
+a:visited { color: #ff0; }
+a:hover { color: #3f8ab9; }
+
+/**
+*二级页面横向菜单  */
+.common_tabsContent { display: flex; }
+.common_tabsContent a { display: flex; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; padding-left: 0.1rem; padding-right: 0.1rem; text-decoration: none; color: #e8e9ea; font-size: 0.18rem; border-image: url(../img/head/HTab.png) 19 fill/0.19rem; }
+.common_tabsContent a:first-child { border-image: url(../img/head/hTabHead.png) 19 fill/0.19rem; }
+.common_tabsContent a:visited { color: #e8e9ea; }
+.common_tabsContent a:hover { transform: scaleY(1.1); border-image: url(../img/head/HTabSel.png) 19 fill/0.19rem; }
+.common_tabsContent a:active { transform: scale(1); }
+.common_tabsContent a.common_tabSel { color: #ff0; border-image: url(../img/head/HTabSel.png) 19 fill/0.19rem; }
+.common_tabsContent a:first-child.common_tabSel { border-image: url(../img/head/hTabHeadSel.png) 19 fill/0.19rem; }
+.common_tabsContent a:first-child:hover { border-image: url(../img/head/hTabHeadSel.png) 19 fill/0.19rem; }
+
+.common_tooltip { position: absolute; max-width: 3rem; padding: 0.05rem; border-radius: 0.04rem; background: rgba(2, 42, 81, 0.9); box-shadow: 0 0 0.05rem #3f8ab9; z-index: 9990; }
+
+/*---滚动条默认显示样式--  */
+::-webkit-scrollbar-thumb { border-radius: 0.07rem; background-color: #326e93; }
+
+/*---滚动条大小--*/
+::-webkit-scrollbar { width: 0.15rem; height: 0.15rem; }
+
+/*---滚动框背景样式--*/
+::-webkit-scrollbar-track { background-color: #022A51; }
+
+::-webkit-scrollbar-corner { background-color: #3f8ab9; }
+
+/*--zTree自定义样式 开始--*/
+.ztree span { font-family: Microsoft YaHei, serif; }
+.ztree li { margin-top: 0.05rem; }
+.ztree li a { height: 0.28rem; }
+.ztree li a.curSelectedNode { height: 0.28rem; padding-top: 0.05rem; border: 0; background-color: #3f8ab9; }
+.ztree li ul { padding-top: 0.1rem; }
+.ztree li span.button.ico_close { line-height: 0.28rem; width: 0.24rem; height: 0.28rem; vertical-align: middle; background: url(../img/gysp/folder.png) 0 0 no-repeat; }
+.ztree li span.button.ico_open, .ztree li span.button.ico_docu { line-height: 0.28rem; width: 0.24rem; height: 0.28rem; vertical-align: middle; background: url(../img/gysp/folder-open.png) 0 0 no-repeat; }
+
+.roomContainer { width: 90%; height: 94%; margin: 3% 5%; }
+.roomContainer .popzTree_bottomBox { display: flex; align-items: center; justify-content: center; width: 80%; margin: 0% 10%; }
+.roomContainer .popzTree_bottomBox .popzTree_bt_wrap { width: 100%; display: flex; align-items: center; justify-content: center; }
+.roomContainer .popzTree_bottomBox .popzTree_bt_wrap .popzTree_btn { width: 60%; }
+
+.zTreeDiv { margin: 6% 0 0 10%; width: 4rem; height: 80%; overflow: auto; }
+.zTreeDiv .ztree { margin: 0; padding: 0.05rem; color: #e8e9ea; }
+.zTreeDiv .ztree * { padding: 0; margin: 0; font-family: Microsoft YaHei, serif; }
+.zTreeDiv .ztree li { padding: 0; margin: 0; list-style: none; line-height: 0.2rem; text-align: left; white-space: nowrap; outline: 0; }
+.zTreeDiv .ztree li ul { padding-left: 0.18rem; padding-right: 0; padding-top: 0; padding-bottom: 0; }
+.zTreeDiv .ztree li ul.line { background: url(../img/popzTree/img/line_conn.gif) 0 0 repeat-y; }
+.zTreeDiv .ztree li a { padding-left: 0; padding-right: 0.03rem; padding-top: 0.014rem; padding-bottom: 0; cursor: pointer; height: 0.2rem; color: #e8e9ea; background-color: transparent; text-decoration: none; vertical-align: top; display: inline-block; }
+.zTreeDiv .ztree li a:hover { text-decoration: underline; }
+.zTreeDiv .ztree li a.tmpTargetNode_inner { padding-top: 0; color: #e8e9ea; height: 0.2rem; border: 0.014rem #316AC5 solid; }
+.zTreeDiv .ztree li a.curSelectedNode_Edit, .zTreeDiv .ztree li a.curSelectedNode { padding-top: 0; color: #ff0; height: 0.2rem; border: 0.014rem #3a7ea6 solid; opacity: 0.8; }
+.zTreeDiv .ztree li a input.rename { height: 0.18rem; width: 0.8rem; padding: 0; margin: 0; border: 0.014rem #7EC4CC solid; font-size: 0.16rem; *border: 0; }
+.zTreeDiv .ztree li span { line-height: 0.2rem; margin-right: 0.02rem; }
+.zTreeDiv .ztree li span.button { line-height: 0; margin: 0; width: 0.16rem; height: 0.2rem; display: inline-block; vertical-align: middle; cursor: pointer; border: 0 none; outline: none; background: transparent no-repeat scroll; }
+.zTreeDiv .ztree li span.button.chk { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; width: 0.14rem; height: 0.14rem; margin-top: -0.014rem; cursor: auto; }
+.zTreeDiv .ztree li span.button.chk.checkbox_false_full:before { content: "\f096"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_false_full_focus:before { content: "\f096"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_false_part:before { content: "\f096"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_false_part_focus:before { content: "\f096"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_false_disable:before { content: "\f096"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_true_full:before { content: "\f046"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_true_full_focus:before { content: "\f046"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_true_part:before { content: "\f046"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_true_part_focus:before { content: "\f046"; }
+.zTreeDiv .ztree li span.button.chk.checkbox_true_disable:before { content: "\f046"; }
+.zTreeDiv .ztree li span.button.chk.radio_false_full { background-position: -0.28rem 0; }
+.zTreeDiv .ztree li span.button.chk.radio_false_full_focus { background-position: -0.28rem -0.14rem; }
+.zTreeDiv .ztree li span.button.chk.radio_false_part { background-position: -0.28rem -0.28rem; }
+.zTreeDiv .ztree li span.button.chk.radio_false_part_focus { background-position: -0.28rem -0.42rem; }
+.zTreeDiv .ztree li span.button.chk.radio_false_disable { background-position: -0.28rem -0.56rem; }
+.zTreeDiv .ztree li span.button.chk.radio_true_full { background-position: -0.42rem 0; }
+.zTreeDiv .ztree li span.button.chk.radio_true_full_focus { background-position: -0.42rem -0.14rem; }
+.zTreeDiv .ztree li span.button.chk.radio_true_part { background-position: -0.42rem -0.28rem; }
+.zTreeDiv .ztree li span.button.chk.radio_true_part_focus { background-position: -0.42rem -0.42rem; }
+.zTreeDiv .ztree li span.button.chk.radio_true_disable { background-position: -0.42rem -0.56rem; }
+.zTreeDiv .ztree li span.button.switch { width: 0.16rem; height: 0.16rem; margin-top: 0.02rem; background-size: 0.12rem; }
+.zTreeDiv .ztree li span.button.root_open, .zTreeDiv .ztree li span.button.roots_open, .zTreeDiv .ztree li span.button.center_open, .zTreeDiv .ztree li span.button.bottom_open, .zTreeDiv .ztree li span.button.noline_open { background-image: url(../img/popzTree/img/folder-open.png); *background-image: url(../img/popzTree/img/folder-open.png); }
+.zTreeDiv .ztree li span.button.root_close, .zTreeDiv .ztree li span.button.roots_close, .zTreeDiv .ztree li span.button.center_close, .zTreeDiv .ztree li span.button.bottom_close, .zTreeDiv .ztree li span.button.noline_close { background-image: url(../img/popzTree/img/folder.png); *background-image: url(../img/popzTree/img/folder.png); }
+.zTreeDiv .ztree li span.button.root_docu { background: none; }
+.zTreeDiv .ztree li span.button.roots_docu { background-position: -0.56rem 0; }
+.zTreeDiv .ztree li span.button.center_docu { background-position: -0.56rem -0.18rem; }
+.zTreeDiv .ztree li span.button.bottom_docu { background-position: -0.56rem -0.36rem; }
+.zTreeDiv .ztree li span.button.noline_docu { background: none; }
+.zTreeDiv .ztree li span.button.ico_open, .zTreeDiv .ztree li span.button.ico_close, .zTreeDiv .ztree li span.button.ico_docu { background-size: 0.2rem !important; margin: 0 0.02rem; vertical-align: top; *vertical-align: middle; width: 0.22rem; }
+.zTreeDiv .ztree li span.button.edit { margin-left: 0.05rem; background: url(../img/popzTree/img/icons.png) no-repeat -0.014rem; *background: url(../img/popzTree/img/icons.png) no-repeat -0.014rem; }
+.zTreeDiv .ztree li span.button.remove { margin-left: 0.05rem; background: url(../img/popzTree/img/icons.png) no-repeat -0.234rem; *background: url(../img/popzTree/img/icons.png) no-repeat -0.234rem; }
+.zTreeDiv .ztree li span.button.ico_loading { margin-left: 0.02rem; background: url(../img/popzTree/img/loading.gif) no-repeat scroll 0 0 transparent; vertical-align: top; *vertical-align: middle; }
+.zTreeDiv ul.tmpTargetzTree { background-color: #022A51; opacity: 0.8; filter: alpha(opacity=80); }
+.zTreeDiv ul.ztree.zTreeDragUL { margin: 0; padding: 0; position: absolute; width: auto; height: auto; overflow: hidden; background-color: #cfcfcf; border: 0.014rem #00B83F dotted; opacity: 0.8; filter: alpha(opacity=80); }
+.zTreeDiv span.tmpzTreeMove_arrow { width: 0.16rem; height: 0.2rem; display: inline-block; padding: 0; margin-top: 0.02rem; margin-bottom: 0; margin-left: 0.014rem; margin-right: 0; border: 0 none; position: absolute; background: transparent url(../img/popzTree/img/zTreeStandard.png) no-repeat scroll -1.1rem -0.8rem; *background: url(../img/popzTree/img/zTreeStandard.gif); }
+.zTreeDiv .zTreeMask { z-index: 10000; background-color: #cfcfcf; opacity: 0.0; filter: alpha(opacity=0); position: absolute; }
+
+/*布局分割线  */
+.cut_off_line { height: 0.014rem; margin-bottom: 0.15rem; border-bottom: 0.014rem solid #3f8ab9; }
+
+.cut_off_dashedLine { height: 0.014rem; margin-top: 0.15rem; margin-bottom: 0.05rem; border-bottom: 0.014rem dashed #3f8ab9; }
+
+.dot_overflow { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.hide { display: none; }
+
+.popzTree_bottomBox { display: flex; align-items: center; justify-content: center; width: 100%; height: 10%; }
+
+.popzTree_bt_wrap { width: 20%; display: flex; align-items: center; justify-content: center; }
+
+/****************************************************弹窗  树 ztree*********************************************begin*********/
+.common_popzTree { position: absolute; /*box-shadow: 0 0 75px rgba(81, 203, 238, 1);*/ z-index: 101; width: 400px; height: 650px; /*    background: rgba(24,51,75,0.6); */ border-image: none; border: 3px solid #3a7ea6; border-radius: 15px; background-color: rgba(58, 126, 166, 0.4); box-shadow: 0 0 45px #51cbee; /*  border-image: url(../img/new_window.png)  100 fill/100px; */ }
+
+.common_popzTree_title { font-size: 20px; position: absolute; /* top: 10px; */ /* left: 15px; */ margin: 15px 15px; background: #196E9C; display: none; border-radius: 10px; width: 365px; height: 40px; padding-left: 15px; line-height: 40px; /*  border-image: url(../img/common_pubBtn.png) 63 93 1 40 fill/63px 93px 1px 40px; */ border-image: none; }
+
+.common_popzTree_bottomBox { position: absolute; bottom: 15px; margin-left: 15px; width: 365px; height: 40px; line-height: 40px; }
+
+.common_popzTree_bottomBox_btn { font-family: Microsoft YaHei, serif; font-size: 16px; line-height: 18px; position: relative; left: 52px; overflow: hidden; width: 80px; height: 25px; margin: 0 10px 0 auto; cursor: pointer; text-align: center; color: #e8e9ea; border: 1px solid #3a7ea6; border-radius: 5px; outline: none; background: none; }
+
+/** 自动换行类 */
+.lineFeed_td { height: initial !important; }
+
+.lineFeed_td_div { max-height: 1.5rem; overflow-y: auto !important; white-space: normal !important; line-height: initial !important; height: initial !important; word-wrap: break-word; }
+
+/** 自动换行类 */
+
+/*模糊查询菜单*/
+.searchMenu_xlContent { position: absolute; width: 100%;max-height: 5.9rem; z-index: 998; overflow-y: auto; margin: 0; padding: 0; border: 0.014rem solid #3f8ab9; border-top: none; border-radius: 0.05rem; background: rgba(2, 42, 81, 0.8); }
+.searchMenu_xlContent .searchMenu_xlUl { overflow-x: hidden; overflow-y: auto; width: 100%; margin: 0; padding: 0; border-top: none; }
+.searchMenu_xlContent .searchMenu_selectItem { font: normal 0.16rem Microsoft YaHei, serif; height: 0.25rem; padding-left: 0.05rem; cursor: pointer; text-align: left; width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.searchMenu_xlContent .searchMenu_selectItem:hover { border-radius: 0.04rem; background: rgba(63, 138, 185, 0.38); }
+.searchMenu_xlContent .searchMenu_selectItemSel { border-radius: 0.04rempx; background: rgba(63, 138, 185, 0.38); }
+
+
